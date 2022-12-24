@@ -1,7 +1,7 @@
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 
 -- use canoe
-QRCore.Functions.CreateUseableItem("canoe", function(source, item)
+RSGCore.Functions.CreateUseableItem("canoe", function(source, item)
     local src = source
 	TriggerClientEvent('rsg-canoe:client:lauchcanoe', src, item.name)
 end)

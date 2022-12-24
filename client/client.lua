@@ -1,9 +1,9 @@
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 local boatout = false
 
 RegisterNetEvent('rsg-canoe:client:lauchcanoe')
 AddEventHandler('rsg-canoe:client:lauchcanoe', function()
-	local hasItem = QRCore.Functions.HasItem('canoe', 1)
+	local hasItem = RSGCore.Functions.HasItem('canoe', 1)
 	if hasItem then
 		if boatout == false then
 			local ped = PlayerPedId()
@@ -31,13 +31,13 @@ AddEventHandler('rsg-canoe:client:lauchcanoe', function()
 				SetModelAsNoLongerNeeded(canoe)
 				boatout = true
 			else
-				QRCore.Functions.Notify('You can\'t take out your boat here!', 'error')
+				RSGCore.Functions.Notify('You can\'t take out your boat here!', 'error')
 			end
 		else
-			QRCore.Functions.Notify('You already have your canoe out!', 'error')
+			RSGCore.Functions.Notify('You already have your canoe out!', 'error')
 		end
 	else
-		QRCore.Functions.Notify('You don\'t have this item!', 'error')
+		RSGCore.Functions.Notify('You don\'t have this item!', 'error')
 	end
 end)
 
