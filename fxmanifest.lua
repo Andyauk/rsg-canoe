@@ -6,15 +6,17 @@ author 'RexShack#3041'
 description 'rsg-canoe'
 
 client_scripts {
-	'client/client.lua',
+    'client/client.lua',
 }
 
 server_scripts {
-	'server/server.lua',
+    'server/server.lua',
 }
 
 shared_scripts {
-	'config.lua'
+    '@rsg-core/shared/locale.lua',
+    'locales/en.lua', -- Change this to your preferred language
+    'config.lua'
 }
 
 dependency 'rsg-core'
